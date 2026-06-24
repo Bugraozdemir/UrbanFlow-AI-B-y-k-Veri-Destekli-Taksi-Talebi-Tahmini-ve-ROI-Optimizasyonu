@@ -1,0 +1,13 @@
+{
+  "project": "UrbanFlow AI",
+  "run_id": "bb5953e0",
+  "hive_table": "student_adminboot.urbanflow_gold_weather_v1",
+  "gold_record_count": 381600,
+  "best_model": "HistGradientBoosting",
+  "best_model_f1": 0.9528619528619529,
+  "best_model_roc_auc": 0.9991656294680926,
+  "best_threshold": 0.75,
+  "best_threshold_roi": 3.1220068993506493,
+  "best_threshold_net_benefit": 307705.0,
+  "created_at": "2026-06-17T09:28:28.405334"
+}

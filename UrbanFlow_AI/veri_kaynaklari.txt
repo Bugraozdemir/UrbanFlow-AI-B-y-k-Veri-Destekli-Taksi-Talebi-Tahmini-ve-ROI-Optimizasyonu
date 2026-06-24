@@ -1,0 +1,57 @@
+UrbanFlow AI - Veri Kaynakları
+
+Drive linki : https://drive.google.com/file/d/1eAa9-PDRl_cASWz9cSGeJpr73BltaruX/view?usp=drive_link
+
+1. NYC Yellow Taxi Trip Data
+Kaynak: New York City Taxi & Limousine Commission (TLC) Trip Record Data
+Kullanılan dosyalar:
+- yellow_tripdata_2024-01.parquet
+- yellow_tripdata_2024-02.parquet
+
+Erişim bağlantısı:
+https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
+
+Açıklama:
+Bu veri seti, New York sarı taksi yolculuklarına ait zaman, mesafe, ücret, ödeme tipi,
+pickup ve dropoff lokasyon bilgilerini içermektedir. Projede bölge-saat bazında taksi talebi
+tahmini için ana veri kaynağı olarak kullanılmıştır.
+
+2. Taxi Zone Lookup
+Kaynak: New York City Taxi & Limousine Commission (TLC) Taxi Zone Lookup
+Kullanılan dosya:
+- taxi_zone_lookup.csv
+
+Erişim bağlantısı:
+https://d37ci6vzurychx.cloudfront.net/misc/taxi_zone_lookup.csv
+
+Açıklama:
+Bu veri seti, taksi yolculuk verisindeki lokasyon ID değerlerini borough, zone adı ve servis
+bölgesi bilgileriyle eşleştirmek için kullanılmıştır.
+
+3. NYC Historical Weather Data
+Kaynak: Open-Meteo Historical Weather API
+Kullanılan dosya:
+- nyc_weather_2024_01_02.csv
+
+Örnek erişim bağlantısı:
+https://archive-api.open-meteo.com/v1/archive?latitude=40.7128&longitude=-74.0060&start_date=2024-01-01&end_date=2024-02-29&hourly=temperature_2m,precipitation,rain,snowfall,wind_speed_10m,weather_code&timezone=America%2FNew_York&format=csv
+
+Açıklama:
+Bu veri seti, New York için saatlik sıcaklık, yağış, kar, rüzgâr ve hava durumu kodu bilgilerini
+içermektedir. Modelin hava koşullarının taksi talebi üzerindeki etkisini öğrenmesi amacıyla
+bölge-saat veri setine eklenmiştir.
+
+4. Takvim ve Zaman Tabanlı Türetilmiş Özellikler
+Kaynak: Proje kapsamında pickup_datetime değişkeninden türetilmiştir.
+
+Türetilen değişkenler:
+- hour_of_day
+- day_of_week
+- month
+- is_weekend
+- is_rush_hour
+- is_night
+- is_holiday
+
+Açıklama:
+Bu değişkenler, iş mantığına dayalı feature engineering kapsamında oluşturulmuştur.
